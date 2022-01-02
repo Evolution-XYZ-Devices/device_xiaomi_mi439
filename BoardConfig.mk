@@ -7,24 +7,24 @@
 # Inherit from common sdm439-common
 include device/xiaomi/sdm439-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/xiaomi/olives
+DEVICE_PATH := device/xiaomi/mi439
 
 # Asserts
-TARGET_OTA_ASSERT_DEVICE := olive,olivelite,olivewood,olives
+TARGET_OTA_ASSERT_DEVICE := pine,olive,olivelite,olivewood,olives,mi439
 
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_olives
-TARGET_RECOVERY_DEVICE_MODULES := libinit_olives
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_mi439
+TARGET_RECOVERY_DEVICE_MODULES := libinit_mi439
 
 # Kernel
-TARGET_KERNEL_CONFIG := olive-perf_defconfig
+TARGET_KERNEL_CONFIG := mi439-perf_defconfig
 
 # Partitions
-BOARD_CACHEIMAGE_PARTITION_SIZE := 402653184
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 4294967296
+BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3221225472
 
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
@@ -37,4 +37,4 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/biometrics/sepolicy
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Inherit from the proprietary version
-include vendor/xiaomi/olives/BoardConfigVendor.mk
+include vendor/xiaomi/mi439/BoardConfigVendor.mk
