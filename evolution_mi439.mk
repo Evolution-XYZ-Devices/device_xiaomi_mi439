@@ -23,7 +23,7 @@ PRODUCT_PACKAGES += \
 # Bootanimation res
 TARGET_BOOT_ANIMATION_RES := 720
 TARGET_SUPPORTS_QUICK_TAP := true
-
+EVO_BUILD_TYPE := OFFICIAL
 PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
 
 # Device identifier. This must come after all inclusions
